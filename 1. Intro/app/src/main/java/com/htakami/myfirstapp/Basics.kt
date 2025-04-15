@@ -2,6 +2,20 @@ package com.htakami.myfirstapp
 
 fun main(){
 
+    val defaultBook = BookClass()
+    println(defaultBook.title)
+    println(defaultBook.author)
+    println(defaultBook.yearPublished)
+
+    val customBook = BookClass("Sherlock Holmes")
+    customBook.author = "Arthur Conan Doyle"
+    customBook.yearPublished = 1892
+    println("${customBook.title}, ${customBook.author} - ${customBook.yearPublished}")
+
+}
+
+
+fun rockPaperScissors(){
     var userSelection = ""
 
     while (userSelection != "exit"){
@@ -36,8 +50,5 @@ fun main(){
         }
 
 
-   }
-
-
-
+    }
 }
